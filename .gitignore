@@ -1,8 +1,25 @@
-git rm -r --cached .
-node_modules
-.next
-dist
-out
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+dist/
+
+# Env files
 .env
-npm-debug.log
-yarn-error.log
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / Misc
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
