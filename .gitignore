@@ -1,0 +1,8 @@
+git rm -r --cached .
+node_modules
+.next
+dist
+out
+.env
+npm-debug.log
+yarn-error.log
