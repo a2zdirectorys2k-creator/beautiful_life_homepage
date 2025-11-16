@@ -1,33 +1,37 @@
 <header className="header">
 
- {/* COLUMN 1 — BLF LOGO + TITLE + BUTTERFLY */}
+{/* COLUMN 1 – BLF LOGO + TITLE + BUTTERFLY */}
 <div className="blf-col">
-  <div className="relative inline-flex items-center blf-wrap">
+ <div className="relative inline-flex items-center blf-wrap w-fit mx-auto">
 
     {/* Logo */}
-    <img 
-      src="/assets/img/logos/header1/BEAUTIFUL LIFE LOGO 2.jpg" 
-      className="blf-logo"
-    />
-
-    {/* Title */}
-    <div className="blf-title ml-2">Beautiful Life</div>
-{/* Butterfly */}
-<img
+  <img
   src="/assets/img/logos/header1/butterfly (2).gif"
   className="
-    butterfly
-    absolute
-    bottom-[4px]       /* sits on title in mobile */
-    right-[6px]
-    w-6 h-6            /* mobile size */
-    md:w-10 md:h-10    /* desktop size */
-    md:bottom-[6px]
-    md:right-[8px]
-    translate-x-0 translate-y-1     /* small lift */
-    md:translate-x-0 md:translate-y-0
-  "
+  absolute
+  right-[20px]
+  top-[5px]
+
+  max-md:right-[45px]
+  max-md:top-[-10px]
+
+  animate-fly
+"
+
 />
+
+  </div>
+</div>
+
+
+</div>
+A
+
+  </div>
+</div>
+
+
+
 
 
 
