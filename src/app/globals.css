@@ -1,124 +1,175 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* -----------------------------------------
-   BEAUTIFUL LIFE — CUSTOM HEADER STYLING
------------------------------------------ */
-
-.header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  align-items: center;
-  padding: 20px 40px;
-  border-bottom: 3px solid #d1b274;
-  background: linear-gradient(to right, #e8f7f1, #fff9e9);
+/* ------------------------------------------------ */
+/* GLOBAL FONT + MAKE ALL TEXT BOLD                */
+/* ------------------------------------------------ */
+body, * {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 700 !important;
 }
 
-/* COLUMN 1 — BLF LOGO */
-.blf-col {
+
+/* ------------------------------------------------ */
+/* HERO SECTION – TITLE + BUTTERFLIES + BUTTONS     */
+/* ------------------------------------------------ */
+
+.hero-container {
+  width: 100%;
   text-align: center;
-}
-
-.blf-wrap {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 10px 0 25px 0;
+  background: linear-gradient(to right, #E4F7F7, #FFF1E6);
   position: relative;
-  display: inline-block;
+  border-bottom: 5px solid #d4af37; /* GOLD BORDER BETWEEN HERO & HEADER */
 }
 
-.blf-logo {
-  width: 150px;
-  height: 150px;
+/* TITLE */
+.hero-title-image {
+  width: 360px;
+  transition: transform .4s ease;
+  cursor: pointer;
 }
 
-.blf-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-/* BUTTERFLY – final landing (touches the "e" tail) */
-.butterfly {
-    position: absolute;
-    width: 85px;
-    top: 135px;   /* move DOWN */
-    left: 240px;  /* move RIGHT */
-    animation: flutter 3s ease-in-out infinite;
-    filter: drop-shadow(0px 6px 14px rgba(0,0,0,0.25));
-    z-index: 10;
-}
-/* flutter animation (keep this in the file) */
-@keyframes flutter {
-  0%   { transform: translateY(0px) scaleX(-1); }
-  50%  { transform: translateY(-6px) scaleX(-1); }
-  100% { transform: translateY(0px) scaleX(-1); }
+.hero-title-image:hover {
+  transform: scale(1.25);
 }
 
-/* FRIENDS OF FRIENDS */
-.fof-col {
+/* BUTTERFLIES */
+.hero-butterfly {
+  width: 90px;
+  position: absolute;
+  top: 22%;
+  transform: translateY(-50%);
+  opacity: 0.9;
+  z-index: 9999;
+}
+
+/* MOVED CLOSER TO BLF TITLE */
+.hero-butterfly-left {
+  left: 22%; /* shifted inward toward title */
+  animation: leftHover 6s ease-in-out infinite;
+}
+
+.hero-butterfly-right {
+  right: 22%; /* shifted inward toward title */
+  animation: rightHover 6s ease-in-out infinite;
+}
+
+/* UPDATED BUTTERFLY MOTION — wider + lower arc */
+@keyframes leftHover {
+  0%   { transform: translate(-60px, 15px); opacity: 0.7; }
+  30%  { transform: translate(-20px, -40px); opacity: 1; }
+  60%  { transform: translate(40px, -10px); opacity: 1; }
+  100% { transform: translate(-60px, 15px); opacity: 0.7; }
+}
+
+@keyframes rightHover {
+  0%   { transform: translate(60px, 15px) scaleX(-1); opacity: 0.7; }
+  30%  { transform: translate(20px, -40px) scaleX(-1); opacity: 1; }
+  60%  { transform: translate(-40px, -10px) scaleX(-1); opacity: 1; }
+  100% { transform: translate(60px, 15px) scaleX(-1); opacity: 0.7; }
+}
+
+
+/* HERO BUTTON PANEL */
+.hero-buttons {
+  position: absolute;
+  right: 5%;
+  top: 25%;
   text-align: center;
 }
-.fof-logo {
-  width: 150px;
-}
-.fof-title {
-  margin-top: 10px;
-  font-weight: bold;
+
+.hero-buttons .reg-btn,
+.hero-buttons .login-btn {
+  padding: 10px 22px;
+  font-size: 18px;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+  transition: 0.25s ease;
 }
 
-/* A2Z GROUP COMPANIES */
-.a2z-col {
-  text-align: center;
-}
-.a2z-logo {
-  width: 160px;
-}
-.a2z-title {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* REGISTER / LOGIN */
-.auth-col {
-  text-align: center;
-}
-.reg-btn {
+.hero-buttons .reg-btn {
   background: red;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 6px;
+  margin-right: 8px;
 }
-.login-btn {
+
+.hero-buttons .login-btn {
   background: #0057ff;
-  color: #fff;
-  padding: 8px 18px;
-  margin-left: 10px;
-  border-radius: 6px;
 }
-.forgot {
-  margin-top: 8px;
+
+.hero-buttons .reg-btn:hover,
+.hero-buttons .login-btn:hover {
+  transform: scale(1.15);
+}
+
+.hero-buttons .forgot {
+  margin-top: 4px;
   font-size: 14px;
   text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* ------------------------------------------------ */
+/* HEADER WITH MIRRORED GRADIENT                   */
+/* ------------------------------------------------ */
+
+.header-wrapper {
+  margin-top: -5px;
+  padding: 12px 0;
+  border-top: 5px solid #d4af37;
+  border-bottom: 5px solid #d4af37;
+  background: linear-gradient(to right, #FFF1E6, #E4F7F7);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+/* LOGOS */
+.logo-item {
+  text-align: center;
+  cursor: pointer;
+  transition: transform .3s ease;
+}
+
+.logo-item:hover {
+  transform: scale(1.5);
+}
+
+.logo-img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+
+.logo-title {
+  margin-top: 6px;
+  font-size: 18px;
 }
 
 /* LANGUAGE SELECTOR */
 .lang-col {
   text-align: center;
 }
+
 .lang-select {
-  padding: 7px 12px;
-  border-radius: 6px;
+  padding: 8px 14px;
+  border-radius: 7px;
+  font-size: 18px;
+  transition: 0.25s ease;
 }
+
+.lang-select:hover {
+  transform: scale(1.15);
+}
+
 .lang-title {
-  margin-top: 8px;
+  margin-top: 5px;
   font-size: 14px;
 }
-/* BEAUTIFUL LIFE — PREMIUM HOLOGRAM EFFECT */
-.hover-zoom {
-  transition: transform 0.3s ease, filter 0.3s ease !important;
-  cursor: pointer;
-}
-
-.hover-zoom:hover,
-.hover-zoom:active {
-  transform: scale(1.25) !important;
-  filter: drop-shadow(0 0 25px rgba(0, 160, 255, 0.55)) !important;
-}
-
