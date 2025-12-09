@@ -1,3 +1,4 @@
+
 /* ------------------------------------------------ */
 /* GLOBAL FONT + MAKE ALL TEXT BOLD                */
 /* ------------------------------------------------ */
@@ -183,5 +184,97 @@ body, * {
 .hover-zoom:hover,
 .hover-zoom:active {
   transform: scale(1.25);
+}
+/* =========================
+   HEADER 2 – BLUE NAV TABS
+   ========================= */
+.nav2-wrapper {
+  width: 100%;
+  background: linear-gradient(90deg, #0066cc, #0099ff);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav2-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Desktop links row */
+.nav2-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav2-link {
+  padding: 8px 18px;
+  border-radius: 999px; /* full pill */
+  background-color: #0057b8;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav2-link:hover {
+  background-color: #004a9d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* Mobile toggle (burger) */
+.nav2-toggle {
+  display: none; /* hidden on desktop */
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  left: 16px;
+}
+
+/* --------------- */
+/*   MOBILE VIEW   */
+/* --------------- */
+@media (max-width: 768px) {
+  .nav2-container {
+    justify-content: center;
+  }
+
+  .nav2-toggle {
+    display: block;
+  }
+
+  .nav2-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 44px;
+    background: #0066cc;
+    padding: 10px;
+    border-radius: 12px;
+    gap: 8px;
+  }
+
+  .nav2-links-open {
+    display: flex;
+  }
+
+  .nav2-link {
+    width: 100%;
+    text-align: center;
+  }
 }
 

@@ -1,0 +1,91 @@
+/* ============================
+   HEADER1 MAIN CONTAINER
+============================ */
+.logo-strip-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  background: linear-gradient(to right, #d7efff, #ffe3ea);
+  border-top: 4px solid #c59d00;
+  border-bottom: 4px solid #c59d00;
+}
+
+/* LEFT SECTION — LOGO ROW */
+.logo-strip-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 140px; /* PERFECT EVEN SPACING */
+}
+
+/* EACH LOGO BLOCK */
+.logo-block {
+  text-align: center;
+}
+
+/* LOGO ZOOM — 150% */
+.logo-zoom {
+  transition: transform 0.3s ease;
+}
+
+.logo-zoom:hover {
+  transform: scale(1.5);
+}
+
+/* IMAGE FIX — NO SQUEEZE */
+.brand-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* TITLE BELOW LOGO */
+.logo-title {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* RIGHT SIDE — LANGUAGE + CONTACT */
+.logo-strip-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-right: 40px;
+}
+
+/* Title above language selector */
+.lang-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Language dropdown */
+.header1-lang {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* CONTACT US BUTTON */
+.header1-contact {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header1-contact:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.8);
+}
