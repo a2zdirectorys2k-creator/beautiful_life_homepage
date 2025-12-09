@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "framer-motion": "latest",
-    "next": "latest",
+    "next": "^16.0.8",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "^5.5.0"
