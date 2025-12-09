@@ -22,16 +22,17 @@ export default function Page() {
 
   const [selectedLanguage, setSelectedLanguage] = useState("English");
 
- return (
+return (
   <>
-    {/* 1️⃣ HERO SECTION – TOP TITLE */}
+    {/* 1️⃣ HERO SECTION WITH BLF TITLE */}
     <HeroSection />
 
-    {/* 2️⃣ HEADER 2 – MAIN NAVIGATION */}
+    {/* 2️⃣ HEADER 2 — NAVIGATION MENU */}
     <Header2 />
 
-    {/* 3️⃣ HEADER 1 – LOGOS ROW */}
+    {/* 3️⃣ HEADER 1 — 3 LOGOS SECTION */}
     <Header />
   </>
 );
+
 }
