@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import "./Header1.css";
 
 export default function Header1() {
@@ -11,7 +12,7 @@ export default function Header1() {
       <div className="logo-strip-left">
 
         {/* Beautiful Life */}
-        <div className="logo-block">
+        <Link href="/blf" className="logo-block">
           <div className="logo-zoom">
             <Image
               src="/assets/img/logos/header1/blf-logo.jpg"
@@ -22,10 +23,10 @@ export default function Header1() {
             />
           </div>
           <div className="logo-title">Beautiful Life</div>
-        </div>
+        </Link>
 
         {/* Friends Of Friends */}
-        <div className="logo-block">
+        <Link href="/fof" className="logo-block">
           <div className="logo-zoom">
             <Image
               src="/assets/img/logos/header1/fof-logo.png"
@@ -36,10 +37,10 @@ export default function Header1() {
             />
           </div>
           <div className="logo-title">Friends Of Friends</div>
-        </div>
+        </Link>
 
         {/* A2Z Group Companies */}
-        <div className="logo-block">
+        <Link href="/a2z" className="logo-block">
           <div className="logo-zoom">
             <Image
               src="/assets/img/logos/header1/a2z-logo.png"
@@ -50,7 +51,7 @@ export default function Header1() {
             />
           </div>
           <div className="logo-title">A2Z Group Companies</div>
-        </div>
+        </Link>
 
       </div>
 
