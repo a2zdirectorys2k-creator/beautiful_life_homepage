@@ -1,0 +1,118 @@
+/* ===== HERO WRAPPER ===== */
+.hero-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* ===== GOLDEN BORDER ===== */
+.hero-gold-border {
+  width: 100%;
+  height: 6px;
+  background: #c59d00;
+}
+
+/* ===== HERO CONTENT FLEX ===== */
+.hero-content {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* ===== BLF LOGO ===== */
+.hero-blf-title {
+  width: 380px;
+  height: auto;
+  transition: transform 0.3s ease;   /* smooth hover animation */
+}
+
+.hero-blf-title:hover {
+  transform: scale(1.2);             /* zoom to 120% */
+}
+
+
+/* ===== BUTTERFLIES ===== */
+.hero-bfly img {
+  width: 90px;
+  height: 90px;
+}
+
+/* FLOATING ANIMATION */
+.hero-bfly img {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* RIGHT MIRRORING */
+.mirror {
+  transform: scaleX(-1) rotate(10deg);   /* butterfly now faces LEFT */
+}
+
+
+/* ===== AUTH BUTTONS (RIGHT SIDE FIXED) ===== */
+.hero-auth {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+
+  display: flex;
+  flex-direction: row;   /* 🔥 changed from column to row */
+  gap: 14px;
+  align-items: center;
+}
+
+
+.hero-btn {
+  padding: 14px 26px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-join {
+  background: #d40000;
+  color: white;
+}
+
+.btn-login {
+  background: #0069ff;
+  color: white;
+}
+
+.hero-btn:hover {
+  transform: scale(1.09);
+}
+
+.hero-forgot {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== SUBTITLE ===== */
+.hero-subtitle {
+  margin-top: 18px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  color: black;
+
+  /* WHITE GLOW */
+  text-shadow:
+    0 0 10px white,
+    0 0 16px white,
+    0 0 22px white;
+}

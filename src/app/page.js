@@ -1,13 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Header from "../components/Header";
-import Header2 from "../components/Header2Component";
 import HeroSection from "../components/HeroSection";
+import Header2 from "../components/Header2Component";
+import Header1 from "../components/Header";
 
 export default function Page() {
-  
-  // 🌍 FULL LANGUAGE LIST
   const languages = useMemo(
     () => [
       "English", "Tamil", "Hindi", "Kannada", "Malayalam", "Telugu",
@@ -22,17 +20,12 @@ export default function Page() {
 
   const [selectedLanguage, setSelectedLanguage] = useState("English");
 
-return (
-  <>
-    {/* 1️⃣ HERO SECTION WITH BLF TITLE */}
-    <HeroSection />
-
-    {/* 2️⃣ HEADER 2 — NAVIGATION MENU */}
-    <Header2 />
-
-    {/* 3️⃣ HEADER 1 — 3 LOGOS SECTION */}
-    <Header />
-  </>
-);
-
+  return (
+   <>
+      <Header2 />
+      <HeroSection />
+      <Header1 />
+   </>
+)
 }
+
